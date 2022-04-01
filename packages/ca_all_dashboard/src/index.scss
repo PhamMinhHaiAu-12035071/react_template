@@ -9,3 +9,15 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
+
+@font-face {
+  font-family: "Sk Modernist Bold";
+  src: local("Sk Modernist Bold"),
+  url("./assets/fonts/Sk-Modernist-Bold.otf") format("truetype");
+}
+
+@font-face {
+  font-family: "Sk Modernist Regular";
+  src: local("Sk Modernist Regular"),
+  url("./assets/fonts/Sk-Modernist-Regular.otf") format("truetype");
+}

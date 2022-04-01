@@ -1,7 +1,8 @@
-import React from "react"
-import RootRouter from "./routes"
-import {Box, CssBaseline, ThemeProvider} from "@mui/material"
-import {theme} from "./themes"
+import React from "react";
+import {Box, CssBaseline, ThemeProvider} from "@mui/material";
+import {theme} from "./themes";
+import {RootRouter} from "./routes";
+import "./i18n/config";
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
         <RootRouter />
       </Box>
     </ThemeProvider>
-  )
+  );
 }
 
-export default App
+export default App;
