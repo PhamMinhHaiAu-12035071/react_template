@@ -1,0 +1,13 @@
+{
+  "name": "root",
+  "private": true,
+  "workspaces": ["packages/*"],
+  "scripts": {
+    "playground_start": "lerna run --scope playground start"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.23",
+    "lerna": "^4.0.0",
+    "typescript": "^4.6.3"
+  }
+}
