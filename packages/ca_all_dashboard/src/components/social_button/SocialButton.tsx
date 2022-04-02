@@ -1,29 +1,32 @@
-import {Button, SvgIcon, Typography} from "@mui/material";
+import {Button, ButtonProps, SvgIcon, Typography, useTheme} from "@mui/material";
 import React from "react";
 
-export interface SocialButtonProps {
+export interface SocialButtonProps extends ButtonProps {
   text: string;
   icon: React.ReactComponentElement<any>;
 }
 const SocialButton = (props: SocialButtonProps) => {
+  const {text, icon, ...rest} = props;
+  const theme = useTheme();
+
   return (
     <Button
-      color={"yellowLight"}
+      {...rest}
+      color={"yellowLight900"}
       variant="contained"
       disableElevation
-      startIcon={<SvgIcon>{props.icon}</SvgIcon>}
-      sx={styledButton}
+      startIcon={<SvgIcon>{icon}</SvgIcon>}
+      sx={{...styledButton, ...{borderRadius: theme.borderRadius.md}}}
     >
       <Typography component={"h6"} variant={"h6"}>
-        {props.text}
+        {text}
       </Typography>
     </Button>
   );
 };
 
 const styledButton = {
-  borderRadius: 16,
-  height: 48,
+  height: "48px",
   textTransform: "none",
 };
 

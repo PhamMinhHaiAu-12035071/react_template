@@ -1,5 +1,12 @@
 {
   "title": "Let’s Sign In to CaAll",
   "notAccount": "Dont’s have an account ?  ",
-  "signUp": "Sign up"
+  "signUp": "Sign up",
+  "signInWithGoogle": "Continue with Google",
+  "signInWithTwitter": "Continue with Twitter",
+  "email": "Email",
+  "password": "Password",
+  "rememberMe": "Remember Me",
+  "forgotPassword": "Forgot Password ?",
+  "login": "Login"
 }

@@ -1,3 +1,5 @@
+@use "src/assets/styles/_mixins.scss";
+
 .sign_in {
   width: 100%;
   height: 100%;
@@ -11,5 +13,36 @@
       left: 48px;
       bottom: 48px;
     }
+  }
+  .wrapper-form {
+    height: 473px;
+    box-sizing: border-box;
+  }
+  .wrapper-title {
+    height: 64px;
+    box-sizing: border-box;
+  }
+  .wrapper-social {
+    height: 48px;
+    box-sizing: border-box;
+    .wrapper-social-button {
+      width: 264px;
+      @include mixins.md {
+        width: auto;
+      }
+      @include mixins.lg {
+        width: 264px;
+      }
+    }
+  }
+  .wrapper-input {
+    height: 122px;
+    box-sizing: border-box;
+  }
+  .wrapper-action {
+    margin-top: 24px;
+    height: 40px;
+    box-sizing: border-box;
+    margin-bottom: 40px;
   }
 }

@@ -2,10 +2,10 @@ import createTheme from "@mui/material/styles/createTheme";
 
 declare module "@mui/material/styles" {
   interface Palette {
-    black: PaletteOptions["primary"];
-    blue: PaletteOptions["primary"];
-    yellow: PaletteOptions["primary"];
-    yellowLight: PaletteOptions["primary"];
+    black: Palette["primary"];
+    blue: Palette["primary"];
+    yellow: Palette["primary"];
+    yellowLight900: Palette["primary"];
   }
 
   // allow configuration using `createTheme`
@@ -13,7 +13,28 @@ declare module "@mui/material/styles" {
     black?: PaletteOptions["primary"];
     blue?: PaletteOptions["primary"];
     yellow?: PaletteOptions["primary"];
-    yellowLight?: PaletteOptions["primary"];
+    yellowLight900?: PaletteOptions["primary"];
+  }
+
+  interface Theme {
+    borderRadius: {
+      md: string;
+    };
+  }
+  // allow configuration using `createTheme`
+  interface ThemeOptions {
+    borderRadius?: {
+      md?: string;
+    };
+  }
+
+  interface PaletteColor {
+    light900?: string;
+    light600?: string;
+  }
+  interface SimplePaletteColorOptions {
+    light900?: string;
+    light600?: string;
   }
 }
 
@@ -23,7 +44,16 @@ declare module "@mui/material/Button" {
     black: true;
     blue: true;
     yellow: true;
-    yellowLight: true;
+    yellowLight900: true;
+  }
+}
+
+declare module "@mui/material/Checkbox" {
+  interface CheckboxPropsColorOverrides {
+    black: true;
+    blue: true;
+    yellow: true;
+    yellowLight900: true;
   }
 }
 
@@ -57,6 +87,8 @@ export const theme = createTheme({
   },
   palette: {
     black: {
+      light900: "rgba(9, 27, 61, 0.1)",
+      light600: "rgba(9, 27, 61, 0.4)",
       main: "#091B3D",
       contrastText: "#fff",
     },
@@ -65,12 +97,16 @@ export const theme = createTheme({
       contrastText: "#fff",
     },
     yellow: {
+      light900: "rgba(245, 181, 68, 0.1)",
       main: "#F5B544",
       contrastText: "#fff",
     },
-    yellowLight: {
+    yellowLight900: {
       main: "rgba(245, 181, 68, 0.1)",
       contrastText: "#091B3D",
     },
+  },
+  borderRadius: {
+    md: "16px",
   },
 });

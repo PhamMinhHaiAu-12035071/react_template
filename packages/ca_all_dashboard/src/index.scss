@@ -1,23 +1,4 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
-    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import "src/assets/styles/_variables.scss";
+@import "src/assets/styles/_mixins.scss";
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
-}
-
-@font-face {
-  font-family: "Sk Modernist Bold";
-  src: local("Sk Modernist Bold"),
-  url("./assets/fonts/Sk-Modernist-Bold.otf") format("truetype");
-}
-
-@font-face {
-  font-family: "Sk Modernist Regular";
-  src: local("Sk Modernist Regular"),
-  url("./assets/fonts/Sk-Modernist-Regular.otf") format("truetype");
-}
+@import "src/assets/styles/_app.scss";
