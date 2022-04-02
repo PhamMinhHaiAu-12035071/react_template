@@ -13,13 +13,18 @@
       left: 48px;
       bottom: 48px;
     }
+    .dropdown-language {
+      position: absolute;
+      right: 8%;
+      top: 30px;
+    }
   }
   .wrapper-form {
-    height: 473px;
+    height: 479px;
     box-sizing: border-box;
   }
   .wrapper-title {
-    height: 64px;
+    height: 70px;
     box-sizing: border-box;
   }
   .wrapper-social {

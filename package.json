@@ -3,7 +3,7 @@
   "private": true,
   "workspaces": ["packages/*"],
   "scripts": {
-    "playground_start": "lerna run --scope playground start"
+    "ca_all_dashboard": "lerna run --scope ca_all_dashboard start"
   },
   "devDependencies": {
     "@types/node": "^17.0.23",

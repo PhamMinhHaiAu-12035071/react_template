@@ -5,8 +5,8 @@ import {
   Container,
   FormControl,
   Grid,
-  Link,
   Typography,
+  FormControlLabel,
   useTheme,
 } from "@mui/material";
 import {ReactComponent as SignInBackground} from "../../assets/images/sign_in/sign_in_background.svg";
@@ -15,6 +15,7 @@ import {SocialButton} from "../../components/social_button";
 import {ReactComponent as GoogleIcon} from "../../assets/images/icons/google.svg";
 import {ReactComponent as TwitterIcon} from "../../assets/images/icons/twitter.svg";
 import {TextFieldFullWidth} from "../../components/text_field_full_width";
+import {SelectLanguage} from "./components/select_language/SelectLanguage";
 
 const labelRemember = {inputProps: {"aria-label": "Checkbox demo"}};
 const SignIn = () => {
@@ -37,9 +38,12 @@ const SignIn = () => {
           <div className={"wrapper-background"}>
             <SignInBackground />
           </div>
+          <div className={"dropdown-language"}>
+            <SelectLanguage />
+          </div>
         </Grid>
         <Grid item lg={7} md={6} xs={6} container direction={"row"} alignItems={"center"}>
-          <Grid item lg={10} md={10} xs={2}>
+          <Grid item lg={10} md={10} xs={10}>
             <Grid
               container
               className={"wrapper-form"}
@@ -58,17 +62,24 @@ const SignIn = () => {
                   </Typography>
                 </Grid>
                 <Grid item>
-                  <Typography variant="caption" display={"block"}>
-                    {t("sign_in_page:notAccount")}
-                    <Link
-                      href="#"
-                      variant="h6"
-                      underline="none"
-                      sx={{color: "blue.main"}}
-                    >
-                      {t("sign_in_page:signUp")}
-                    </Link>
-                  </Typography>
+                  <Grid container direction={"row"} spacing={1} alignItems={"center"}>
+                    <Grid item>
+                      <Typography variant="caption" display={"block"}>
+                        {t("sign_in_page:notAccount")}
+                      </Typography>
+                    </Grid>
+                    <Grid item>
+                      <Button>
+                        <Typography
+                          variant="h6"
+                          component={"h6"}
+                          sx={{color: "blue.main", textTransform: "none"}}
+                        >
+                          {t("sign_in_page:signUp")}
+                        </Typography>
+                      </Button>
+                    </Grid>
+                  </Grid>
                 </Grid>
               </Grid>
               <Grid
@@ -123,26 +134,24 @@ const SignIn = () => {
                   alignItems={"center"}
                 >
                   <Grid item>
-                    <Grid container direction={"row"} alignItems={"center"}>
-                      <Grid item>
-                        <Checkbox {...labelRemember} color={"blue"} />
-                      </Grid>
-                      <Grid item>
+                    <FormControlLabel
+                      control={<Checkbox defaultChecked color={"blue"} />}
+                      label={
                         <Typography component={"h6"} variant={"h6"}>
                           {t("sign_in_page:rememberMe")}
                         </Typography>
-                      </Grid>
-                    </Grid>
+                      }
+                    />
                   </Grid>
                   <Grid item>
-                    <Link
-                      href="#"
-                      variant="caption"
-                      underline="none"
-                      sx={{color: "blue.main"}}
-                    >
-                      {t("sign_in_page:forgotPassword")}
-                    </Link>
+                    <Button>
+                      <Typography
+                        variant="caption"
+                        sx={{color: "blue.main", textTransform: "none"}}
+                      >
+                        {t("sign_in_page:forgotPassword")}
+                      </Typography>
+                    </Button>
                   </Grid>
                 </Grid>
                 <Button

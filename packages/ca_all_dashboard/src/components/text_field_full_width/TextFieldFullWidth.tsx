@@ -16,8 +16,11 @@ const BorderTextField = styled(TextField)(({theme}) => ({
   },
   "& .MuiOutlinedInput-root": {
     "&.Mui-focused fieldset": {
-      borderColor: theme.palette.blue.main,
+      borderColor: `${theme.palette.blue.main} !important`,
       borderWidth: "1px",
+    },
+    "&:hover fieldset": {
+      borderColor: theme.palette.black.light600,
     },
   },
   "& .MuiInputLabel-root": {
