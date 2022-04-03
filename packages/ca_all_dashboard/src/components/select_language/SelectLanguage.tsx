@@ -19,23 +19,9 @@ const SelectLanguage = () => {
       value={language}
       onChange={handleChangeLanguage}
       IconComponent={IconDropdown}
+      className={"select_language"}
       sx={{
-        width: "160px",
-        height: "40px",
-        borderRadius: theme.borderRadius.md,
-        backgroundColor: theme.palette.yellow.light600,
-        padding: "0 12px",
         ...theme.typography.h6,
-
-        "& .MuiOutlinedInput-notchedOutline": {
-          borderColor: theme.palette.yellow.light900,
-        },
-        "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-          borderColor: theme.palette.yellow.light900,
-        },
-        "&:hover .MuiOutlinedInput-notchedOutline": {
-          borderColor: theme.palette.yellow.light600,
-        },
       }}
     >
       <MenuItem value={1}>English</MenuItem>

@@ -15,7 +15,7 @@ import {SocialButton} from "../../components/social_button";
 import {ReactComponent as GoogleIcon} from "../../assets/images/icons/google.svg";
 import {ReactComponent as TwitterIcon} from "../../assets/images/icons/twitter.svg";
 import {TextFieldFullWidth} from "../../components/text_field_full_width";
-import {SelectLanguage} from "./components/select_language";
+import {SelectLanguage} from "../../components/select_language";
 import {AuthTitle} from "../../components/auth_title";
 
 const SignIn = () => {

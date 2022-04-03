@@ -1,12 +1,13 @@
 import React from "react";
 import {Box, CssBaseline, ThemeProvider} from "@mui/material";
-import {theme} from "./themes";
+import {setGlobalStyles, defaultTheme} from "./themes";
 import {RootRouter} from "./routes";
 import "./i18n/config";
 
 function App() {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={defaultTheme}>
+      {setGlobalStyles(defaultTheme)}
       <CssBaseline />
       <Box height="100vh" display="flex" flexDirection="column">
         <RootRouter />
