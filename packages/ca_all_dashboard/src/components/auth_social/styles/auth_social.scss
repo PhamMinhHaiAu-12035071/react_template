@@ -2,9 +2,9 @@
 
 .wrapper-social {
   height: 48px;
+  width: 264px;
   box-sizing: border-box;
   .wrapper-social-button {
-    width: 264px;
     @include mixins.md {
       width: auto;
     }

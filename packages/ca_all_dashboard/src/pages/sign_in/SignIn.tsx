@@ -21,12 +21,10 @@ const SignIn = () => {
   const {t} = useTranslation(["sign_in_page"]);
 
   return (
-    <Container maxWidth={false} disableGutters={true} className={"sign_in"}>
+    <Container maxWidth={false} disableGutters={true} className={"sign-in"}>
       <Grid container spacing={0} direction="row" justifyContent="center">
         <Grid
           item
-          lg={5}
-          md={6}
           xs={6}
           container
           direction={"column"}
@@ -40,8 +38,8 @@ const SignIn = () => {
             <SelectLanguage />
           </div>
         </Grid>
-        <Grid item lg={7} md={6} xs={6} container direction={"row"} alignItems={"center"}>
-          <Grid item lg={10} md={10} xs={10}>
+        <Grid item xs={6} container direction={"row"} alignItems={"center"}>
+          <Grid item xs={10}>
             <Grid
               container
               className={"wrapper-content"}
@@ -126,7 +124,7 @@ const SignIn = () => {
               </FormControl>
             </Grid>
           </Grid>
-          <Grid item lg={2} md={2} xs={2}></Grid>
+          <Grid item xs={2}></Grid>
         </Grid>
       </Grid>
     </Container>

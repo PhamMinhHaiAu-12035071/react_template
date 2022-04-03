@@ -7,7 +7,7 @@ export interface SocialButtonProps extends ButtonProps {
 }
 
 const SocialButton = (props: SocialButtonProps) => {
-  const {text, icon, ...rest} = props;
+  const {text, icon, className, ...rest} = props;
 
   return (
     <Button
@@ -16,7 +16,7 @@ const SocialButton = (props: SocialButtonProps) => {
       variant="contained"
       disableElevation
       startIcon={<SvgIcon>{icon}</SvgIcon>}
-      className={"social-button"}
+      className={`social-button ${className}`}
     >
       <Typography component={"h6"} variant={"h6"}>
         {text}

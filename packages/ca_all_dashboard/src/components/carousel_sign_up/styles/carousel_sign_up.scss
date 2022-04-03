@@ -1,0 +1,23 @@
+.carousel-sign-up {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  .slide {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .wrapper-title {
+    max-height: 92px;
+    overflow: hidden;
+    .title {
+      line-height: 46px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+  }
+}

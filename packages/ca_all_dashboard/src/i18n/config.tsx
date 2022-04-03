@@ -1,14 +1,19 @@
 import i18n from "i18next";
 import en_sign_in_page from "./en/sign_in_page.json";
+import en_sign_up_page from "./en/sign_up_page.json";
 import vi_sign_in_page from "./vi/sign_in_page.json";
+import vi_sign_up_page from "./vi/sign_up_page.json";
+
 import {initReactI18next} from "react-i18next";
 
 export const resources = {
   en: {
     sign_in_page: en_sign_in_page,
+    sign_up_page: en_sign_up_page,
   },
   vi: {
     sign_in_page: vi_sign_in_page,
+    sign_up_page: vi_sign_up_page,
   },
 } as const;
 
