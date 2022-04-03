@@ -9,48 +9,12 @@ const BorderTextField = styled(TextField)(({theme}) => ({
     // paddingBottom: "12.5px",
     ...theme.typography.h6,
   },
-  "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
-    borderColor: theme.palette.black.light900,
-    borderWidth: "1px",
-    borderRadius: theme.borderRadius.md,
-  },
-  "& .MuiOutlinedInput-root": {
-    "&.Mui-focused fieldset": {
-      borderColor: `${theme.palette.blue.main} !important`,
-      borderWidth: "1px",
-    },
-    "&:hover fieldset": {
-      borderColor: theme.palette.black.light600,
-    },
-  },
-  "& .MuiInputLabel-root": {
-    fontFamily: "Sk Modernist Regular, Open Sans",
-    color: theme.palette.black.light600,
-    fontSize: "12px",
-    lineHeight: "16px",
-    left: "10px",
-  },
-  "& .Mui-focused.MuiInputLabel-root.MuiInputLabel-shrink": {
-    fontFamily: "Sk Modernist Regular, Open Sans",
-    color: theme.palette.blue.main,
-    fontSize: "12px",
-    lineHeight: "16px",
-  },
 }));
 
 export type TextFieldFullWidthProps = TextFieldProps;
 
 const TextFieldFullWidth = (props: TextFieldFullWidthProps) => {
-  return (
-    <BorderTextField
-      {...props}
-      inputProps={{
-        style: {
-          paddingLeft: "24px",
-        },
-      }}
-    />
-  );
+  return <BorderTextField {...props} className={"text-field-full-width"} />;
 };
 
 export {TextFieldFullWidth};

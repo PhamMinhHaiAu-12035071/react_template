@@ -46,7 +46,7 @@ const SignIn = () => {
           <Grid item lg={10} md={10} xs={10}>
             <Grid
               container
-              className={"wrapper-form"}
+              className={"wrapper-content"}
               direction={"column"}
               justifyContent={"space-between"}
             >

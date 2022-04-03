@@ -1,0 +1,35 @@
+.text-field-full-width {
+  & .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+    border-color: var(--color-black-light900);
+    border-width: 1px;
+    border-radius: var(--border-radius-md);
+  }
+
+  & .MuiOutlinedInput-root {
+    &.Mui-focused fieldset {
+      border-color: var(--color-blue-main) !important;
+      border-width: 1px;
+    }
+    &:hover fieldset {
+      border-color: var(--color-black-light600);
+    }
+  }
+
+  & .MuiInputLabel-root {
+    font-family: "Sk Modernist Regular, Open Sans", serif;
+    color: var(--color-black-light600);
+    font-size: 12px;
+    line-height: 16px;
+    left: 10px;
+  }
+
+  & .Mui-focused.MuiInputLabel-root.MuiInputLabel-shrink {
+    font-family: "Sk Modernist Regular, Open Sans", serif;
+    color: var(--color-blue-main);
+    font-size: 12px;
+    line-height: 16px;
+  }
+  input {
+    padding-left:  24px;
+  }
+}
