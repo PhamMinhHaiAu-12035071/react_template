@@ -34,5 +34,17 @@
     height: 40px;
     box-sizing: border-box;
     margin-bottom: 40px;
+    .forgot-password {
+      text-transform: none;
+      color: var(--color-blue-main);
+    }
+  }
+  .submit {
+    height: 56px;
+    border-radius: var(--border-radius-md);
+    .text-submit {
+      color: white;
+      text-transform: none;
+    }
   }
 }

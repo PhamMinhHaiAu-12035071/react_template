@@ -7,7 +7,6 @@ import {
   FormControlLabel,
   Grid,
   Typography,
-  useTheme,
 } from "@mui/material";
 import {ReactComponent as SignInBackground} from "../../assets/images/sign_in/sign_in_background.svg";
 import {useTranslation} from "react-i18next";
@@ -19,7 +18,6 @@ import {AuthTitle} from "../../components/auth_title";
 import {AuthSocial} from "../../components/auth_social";
 
 const SignIn = () => {
-  const theme = useTheme();
   const {t} = useTranslation(["sign_in_page"]);
 
   return (
@@ -109,10 +107,7 @@ const SignIn = () => {
                   </Grid>
                   <Grid item>
                     <Button>
-                      <Typography
-                        variant="caption"
-                        sx={{color: "blue.main", textTransform: "none"}}
-                      >
+                      <Typography variant="caption" className={"forgot-password"}>
                         {t("sign_in_page:forgotPassword")}
                       </Typography>
                     </Button>
@@ -122,13 +117,9 @@ const SignIn = () => {
                   variant="contained"
                   disableElevation
                   color={"blue"}
-                  sx={{borderRadius: theme.borderRadius.md, height: "56px"}}
+                  className={"submit"}
                 >
-                  <Typography
-                    component={"h6"}
-                    variant={"h6"}
-                    sx={{color: "white", textTransform: "none"}}
-                  >
+                  <Typography component={"h6"} variant={"h6"} className={"text-submit"}>
                     {t("sign_in_page:login")}
                   </Typography>
                 </Button>
