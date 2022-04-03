@@ -15,9 +15,9 @@ import {SocialButton} from "../../components/social_button";
 import {ReactComponent as GoogleIcon} from "../../assets/images/icons/google.svg";
 import {ReactComponent as TwitterIcon} from "../../assets/images/icons/twitter.svg";
 import {TextFieldFullWidth} from "../../components/text_field_full_width";
-import {SelectLanguage} from "./components/select_language/SelectLanguage";
+import {SelectLanguage} from "./components/select_language";
+import {AuthTitle} from "../../components/auth_title";
 
-const labelRemember = {inputProps: {"aria-label": "Checkbox demo"}};
 const SignIn = () => {
   const theme = useTheme();
   const {t} = useTranslation(["sign_in_page"]);
@@ -50,38 +50,11 @@ const SignIn = () => {
               direction={"column"}
               justifyContent={"space-between"}
             >
-              <Grid
-                className={"wrapper-title"}
-                container
-                direction={"column"}
-                justifyContent={"space-between"}
-              >
-                <Grid item>
-                  <Typography component={"h1"} variant={"h1"}>
-                    {t("sign_in_page:title")}
-                  </Typography>
-                </Grid>
-                <Grid item>
-                  <Grid container direction={"row"} spacing={1} alignItems={"center"}>
-                    <Grid item>
-                      <Typography variant="caption" display={"block"}>
-                        {t("sign_in_page:notAccount")}
-                      </Typography>
-                    </Grid>
-                    <Grid item>
-                      <Button>
-                        <Typography
-                          variant="h6"
-                          component={"h6"}
-                          sx={{color: "blue.main", textTransform: "none"}}
-                        >
-                          {t("sign_in_page:signUp")}
-                        </Typography>
-                      </Button>
-                    </Grid>
-                  </Grid>
-                </Grid>
-              </Grid>
+              <AuthTitle
+                title={t("sign_in_page:title")}
+                description={t("sign_in_page:notAccount")}
+                link={{text: t("sign_in_page:signUp")}}
+              />
               <Grid
                 container
                 direction={"row"}

@@ -1,3 +1,3 @@
 import "./styles/index.scss";
 
-export * from "./SignIn";
+export * from "./AuthTitle";
