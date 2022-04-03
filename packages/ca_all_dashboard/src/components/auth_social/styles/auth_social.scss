@@ -1,0 +1,15 @@
+@use "src/assets/styles/_mixins.scss";
+
+.wrapper-social {
+  height: 48px;
+  box-sizing: border-box;
+  .wrapper-social-button {
+    width: 264px;
+    @include mixins.md {
+      width: auto;
+    }
+    @include mixins.lg {
+      width: 264px;
+    }
+  }
+}

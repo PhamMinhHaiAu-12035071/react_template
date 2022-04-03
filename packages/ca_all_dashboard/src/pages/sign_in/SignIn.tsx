@@ -4,19 +4,19 @@ import {
   Checkbox,
   Container,
   FormControl,
+  FormControlLabel,
   Grid,
   Typography,
-  FormControlLabel,
   useTheme,
 } from "@mui/material";
 import {ReactComponent as SignInBackground} from "../../assets/images/sign_in/sign_in_background.svg";
 import {useTranslation} from "react-i18next";
-import {SocialButton} from "../../components/social_button";
 import {ReactComponent as GoogleIcon} from "../../assets/images/icons/google.svg";
 import {ReactComponent as TwitterIcon} from "../../assets/images/icons/twitter.svg";
 import {TextFieldFullWidth} from "../../components/text_field_full_width";
 import {SelectLanguage} from "../../components/select_language";
 import {AuthTitle} from "../../components/auth_title";
+import {AuthSocial} from "../../components/auth_social";
 
 const SignIn = () => {
   const theme = useTheme();
@@ -55,27 +55,18 @@ const SignIn = () => {
                 description={t("sign_in_page:notAccount")}
                 link={{text: t("sign_in_page:signUp")}}
               />
-              <Grid
-                container
-                direction={"row"}
-                justifyContent={"space-between"}
-                className={"wrapper-social"}
-              >
-                <Grid item>
-                  <SocialButton
-                    className={"wrapper-social-button"}
-                    text={t("sign_in_page:signInWithGoogle")}
-                    icon={<GoogleIcon />}
-                  />
-                </Grid>
-                <Grid item>
-                  <SocialButton
-                    className={"wrapper-social-button"}
-                    text={t("sign_in_page:signInWithTwitter")}
-                    icon={<TwitterIcon />}
-                  />
-                </Grid>
-              </Grid>
+              <AuthSocial
+                socials={[
+                  {
+                    text: t("sign_in_page:signInWithGoogle"),
+                    icon: <GoogleIcon />,
+                  },
+                  {
+                    text: t("sign_in_page:signInWithTwitter"),
+                    icon: <TwitterIcon />,
+                  },
+                ]}
+              />
               <FormControl fullWidth>
                 <Grid
                   container

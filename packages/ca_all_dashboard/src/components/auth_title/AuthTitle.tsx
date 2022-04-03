@@ -14,11 +14,7 @@ const AuthTitle = (props: AuthTitleProps) => {
       return (
         <Grid item>
           <Button onClick={props.link.onClick}>
-            <Typography
-              variant="h6"
-              component={"h6"}
-              sx={{color: "blue.main", textTransform: "none"}}
-            >
+            <Typography variant="h6" component={"h6"} className={"link"}>
               {props.link.text}
             </Typography>
           </Button>
@@ -30,7 +26,7 @@ const AuthTitle = (props: AuthTitleProps) => {
 
   return (
     <Grid
-      className={"auth_title"}
+      className={"auth-title"}
       container
       direction={"column"}
       justifyContent={"space-between"}
