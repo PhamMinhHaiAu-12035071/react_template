@@ -8,9 +8,11 @@ interface Slide {
   title: string;
   description: string;
 }
+
 interface CarouselSignUpProps {
   slides: Array<Slide>;
 }
+
 // config
 const variants = {
   enter: (direction: number) => {
@@ -59,6 +61,24 @@ const CarouselSignUp = (props: CarouselSignUpProps) => {
     }
     setSelectedValue(event.target.value);
   };
+  const _increaseSelectedValue = (): void => {
+    if (Number(selectedValue) === props.slides.length - 1) {
+      const firstIndex = 0;
+      setSelectedValue(firstIndex.toString());
+      return;
+    }
+    const increase = Number(selectedValue) + 1;
+    setSelectedValue(increase.toString());
+  };
+  const _decreaseSelectedValue = (): void => {
+    if (Number(selectedValue) === 0) {
+      const lastIndex = props.slides.length - 1;
+      setSelectedValue(lastIndex.toString());
+      return;
+    }
+    const decrease = Number(selectedValue) - 1;
+    setSelectedValue(decrease.toString());
+  };
   return (
     <Grid container direction={"column"} className={"carousel-sign-up"}>
       <Grid item xs={9} className={"wrapper-slide"}>
@@ -79,8 +99,10 @@ const CarouselSignUp = (props: CarouselSignUpProps) => {
               const swipe = swipePower(offset.x, velocity.x);
               if (swipe < -swipeConfidenceThreshold) {
                 paginate(1);
+                _increaseSelectedValue();
               } else if (swipe > swipeConfidenceThreshold) {
                 paginate(-1);
+                _decreaseSelectedValue();
               }
             }}
           >
@@ -113,7 +135,7 @@ const CarouselSignUp = (props: CarouselSignUpProps) => {
           </motion.div>
         </AnimatePresence>
       </Grid>
-      <Grid item xs={3} pt={4}>
+      <Grid item xs={3} pt={3}>
         <Grid container direction={"row"} justifyContent={"center"}>
           {props.slides.length > 0 &&
             props.slides.map((item, index) => {

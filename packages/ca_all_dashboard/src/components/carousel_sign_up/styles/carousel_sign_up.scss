@@ -13,6 +13,9 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      img {
+        max-width: 80%;
+      }
       .max-line-2 {
         display: -webkit-box;
         -webkit-line-clamp: 2;
@@ -26,8 +29,8 @@
         .MuiGrid-root.wrapper-title {
           max-height: 92px;
           overflow: hidden;
-          flex-basis: 55.555556%;
-          max-width: 55.555556%;
+          flex-basis: 56.555556%;
+          max-width: 56.555556%;
           .title {
             line-height: 46px;
             @extend .max-line-2;
