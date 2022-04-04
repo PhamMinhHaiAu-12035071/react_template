@@ -17,10 +17,12 @@ const SignUp = () => {
               {
                 image: SlideAwards,
                 title: t("sign_up_page:slideAwardsTitle"),
+                description: t("sign_up_page:slideAwardsDescription"),
               },
               {
                 image: SlideLocation,
                 title: t("sign_up_page:slideLocationTitle"),
+                description: t("sign_up_page:slideLocationDescription"),
               },
             ]}
           />
