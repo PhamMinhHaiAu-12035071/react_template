@@ -7,5 +7,7 @@
   "slideLocationDescription": "With great care, our products are                              loved all over the world",
   "yourName": "Your Name",
   "termAndConditions": "You agree to our Term and Conditions",
-  "register": "Register"
+  "register": "Register",
+  "alreadyAccount": "Already have an account ? ",
+  "signIn": "Sign in"
 }

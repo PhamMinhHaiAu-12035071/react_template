@@ -2,26 +2,38 @@
   height: 100%;
   overflow: hidden;
   position: relative;
+
   .wrapper-slide {
     position: relative;
+
     .slide {
       width: 100%;
       height: auto;
       position: absolute;
-      bottom: 0;
+      bottom: 40px;
       display: flex;
       flex-direction: column;
-      justify-content: center;
       align-items: center;
-      img {
+      box-sizing: border-box;
+
+      .wrapper-image {
+        width: 80%;
         max-width: 80%;
+        margin-bottom: 40px;
+        line-height: 0;
+        box-sizing: border-box;
+        img {
+          max-width: 100%;
+        }
       }
+
       .max-line-2 {
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
         text-align: center;
       }
+
       .wrapper-content {
         height: 164px;
         overflow: hidden;
@@ -31,16 +43,19 @@
           overflow: hidden;
           flex-basis: 56.555556%;
           max-width: 56.555556%;
+
           .title {
             line-height: 46px;
             @extend .max-line-2;
           }
         }
+
         .MuiGrid-root.wrapper-description {
           max-height: 48px;
           overflow: hidden;
           flex-basis: 44.444444%;
           max-width: 44.444444%;
+
           .description {
             @extend .max-line-2;
           }

@@ -16,9 +16,13 @@ import {TextFieldFullWidth} from "../../components/text_field_full_width";
 import {SelectLanguage} from "../../components/select_language";
 import {AuthTitle} from "../../components/auth_title";
 import {AuthSocial} from "../../components/auth_social";
+import {useNavigate} from "react-router";
+import {RoutePath} from "../../routes";
 
 const SignIn = () => {
   const {t} = useTranslation(["sign_in_page"]);
+  const navigate = useNavigate();
+  const _navigateToSignUpPage = (): void => navigate(RoutePath.signUp);
 
   return (
     <Container maxWidth={false} disableGutters={true} className={"sign-in"}>
@@ -49,7 +53,10 @@ const SignIn = () => {
               <AuthTitle
                 title={t("sign_in_page:title")}
                 description={t("sign_in_page:notAccount")}
-                link={{text: t("sign_in_page:signUp")}}
+                link={{
+                  text: t("sign_in_page:signUp"),
+                  onClick: _navigateToSignUpPage,
+                }}
               />
               <AuthSocial
                 socials={[

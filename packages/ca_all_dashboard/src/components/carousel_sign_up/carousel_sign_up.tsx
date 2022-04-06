@@ -80,8 +80,13 @@ const CarouselSignUp = (props: CarouselSignUpProps) => {
     setSelectedValue(decrease.toString());
   };
   return (
-    <Grid container direction={"column"} className={"carousel-sign-up"}>
-      <Grid item xs={9} className={"wrapper-slide"}>
+    <Grid
+      container
+      direction={"column"}
+      className={"carousel-sign-up"}
+      justifyContent={"space-between"}
+    >
+      <Grid item xs={10.5} className={"wrapper-slide"}>
         <AnimatePresence initial={false} custom={direction}>
           <motion.div
             className={"slide"}
@@ -106,11 +111,13 @@ const CarouselSignUp = (props: CarouselSignUpProps) => {
               }
             }}
           >
-            <img
-              className={"image"}
-              src={props.slides[pageIndex].image}
-              alt={"slide-image"}
-            />
+            <div className={"wrapper-image"}>
+              <img
+                className={"image"}
+                src={props.slides[pageIndex].image}
+                alt={"slide-image"}
+              />
+            </div>
             <Grid
               container
               direction={"column"}
@@ -135,7 +142,7 @@ const CarouselSignUp = (props: CarouselSignUpProps) => {
           </motion.div>
         </AnimatePresence>
       </Grid>
-      <Grid item xs={3} pt={3}>
+      <Grid item xs={1.5}>
         <Grid container direction={"row"} justifyContent={"center"}>
           {props.slides.length > 0 &&
             props.slides.map((item, index) => {

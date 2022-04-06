@@ -26,7 +26,7 @@ const CreateAccountLink = (props: CreateAccountLinkProps) => {
     <Grid
       container
       direction={"row"}
-      spacing={1}
+      spacing={0}
       alignItems={"center"}
       className={"create-account-link"}
     >

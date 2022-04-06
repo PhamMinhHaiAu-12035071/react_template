@@ -19,9 +19,15 @@ import {ReactComponent as GoogleIcon} from "../../assets/images/icons/google.svg
 import {ReactComponent as TwitterIcon} from "../../assets/images/icons/twitter.svg";
 import {TextFieldFullWidth} from "../../components/text_field_full_width";
 import {CreateAccountLink} from "../../components/create_account_link";
+import {useNavigate} from "react-router";
+import {RoutePath} from "../../routes";
 
 const SignUp = () => {
   const {t} = useTranslation(["sign_up_page, sign_in_page"]);
+  const navigate = useNavigate();
+
+  const _navigateToSignInPage = (): void => navigate(RoutePath.signIn);
+
   return (
     <Container maxWidth={false} disableGutters={true} className={"sign-up"}>
       <Grid container spacing={0} direction={"row"}>
@@ -117,8 +123,11 @@ const SignUp = () => {
               </div>
               <div className={"wrapper-create-account"}>
                 <CreateAccountLink
-                  description={t("sign_in_page:notAccount")}
-                  link={{text: t("sign_in_page:signUp")}}
+                  description={t("sign_up_page:alreadyAccount")}
+                  link={{
+                    text: t("sign_up_page:signIn"),
+                    onClick: _navigateToSignInPage,
+                  }}
                 />
               </div>
             </Grid>
