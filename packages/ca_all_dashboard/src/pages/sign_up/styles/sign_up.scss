@@ -1,3 +1,5 @@
+$container-height: 83.375vh;
+
 .sign-up {
   .wrapper-right {
     min-height: 100vh;
@@ -5,25 +7,46 @@
     background-color: var(--color-yellow-main);
   }
   .wrapper-left {
-    .wrapper-content {
-      max-height: 864px;
-      .wrapper-input {
-        height: 224px;
-        max-height: 224px;
+    .wrapper-left-container {
+      max-height: 100vh;
+      height: 100vh;
+      .wrapper-content {
+        max-height: $container-height;
+        height: $container-height;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
         box-sizing: border-box;
-      }
-      .wrapper-action {
-        margin-top: 24px;
-        height: 40px;
-        box-sizing: border-box;
-        margin-bottom: 40px;
-      }
-      .register {
-        height: 56px;
-        border-radius: var(--border-radius-md);
-        .text-submit {
-          color: white;
-          text-transform: none;
+        .wrapper-logo {
+        }
+        .wrapper-form {
+          height: 549px;
+          max-height: 549px;
+          box-sizing: border-box;
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          .wrapper-input {
+            height: 191px;
+            max-height: 191px;
+            box-sizing: border-box;
+          }
+          .wrapper-action {
+            margin-top: 24px;
+            height: 40px;
+            box-sizing: border-box;
+            margin-bottom: 40px;
+          }
+          .register {
+            height: 56px;
+            border-radius: var(--border-radius-md);
+            .text-submit {
+              color: white;
+              text-transform: none;
+            }
+          }
+        }
+        .wrapper-create-account {
         }
       }
     }

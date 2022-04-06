@@ -18,6 +18,7 @@ import {AuthSocial} from "../../components/auth_social";
 import {ReactComponent as GoogleIcon} from "../../assets/images/icons/google.svg";
 import {ReactComponent as TwitterIcon} from "../../assets/images/icons/twitter.svg";
 import {TextFieldFullWidth} from "../../components/text_field_full_width";
+import {CreateAccountLink} from "../../components/create_account_link";
 
 const SignUp = () => {
   const {t} = useTranslation(["sign_up_page, sign_in_page"]);
@@ -25,10 +26,17 @@ const SignUp = () => {
     <Container maxWidth={false} disableGutters={true} className={"sign-up"}>
       <Grid container spacing={0} direction={"row"}>
         <Grid item xs={6} className={"wrapper-left"}>
-          <Grid container justifyContent={"center"} alignItems={"center"}>
-            <Grid item xs={9} className={"wrapper-content"}>
-              <Grid container direction={"column"} justifyContent={"space-between"}>
+          <Grid
+            container
+            justifyContent={"center"}
+            alignItems={"center"}
+            className={"wrapper-left-container"}
+          >
+            <Grid item lg={9} md={10} className={"wrapper-content"}>
+              <div className={"wrapper-logo"}>
                 <Logo />
+              </div>
+              <div className={"wrapper-form"}>
                 <AuthTitle
                   title={t("sign_up_page:title")}
                   description={t("sign_up_page:createAccount")}
@@ -106,7 +114,13 @@ const SignUp = () => {
                     </Typography>
                   </Button>
                 </FormControl>
-              </Grid>
+              </div>
+              <div className={"wrapper-create-account"}>
+                <CreateAccountLink
+                  description={t("sign_in_page:notAccount")}
+                  link={{text: t("sign_in_page:signUp")}}
+                />
+              </div>
             </Grid>
           </Grid>
         </Grid>

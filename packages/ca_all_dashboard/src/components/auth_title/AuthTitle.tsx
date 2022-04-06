@@ -1,6 +1,7 @@
 import React from "react";
-import {Button, Grid, Typography} from "@mui/material";
+import {Grid, Typography} from "@mui/material";
 import {Link} from "../../types";
+import {CreateAccountLink} from "../create_account_link";
 
 export interface AuthTitleProps {
   title: string;
@@ -9,21 +10,6 @@ export interface AuthTitleProps {
 }
 
 const AuthTitle = (props: AuthTitleProps) => {
-  const _renderLink = (): React.ReactElement | null => {
-    if (props.link) {
-      return (
-        <Grid item>
-          <Button onClick={props.link.onClick}>
-            <Typography variant="h6" component={"h6"} className={"link"}>
-              {props.link.text}
-            </Typography>
-          </Button>
-        </Grid>
-      );
-    }
-    return null;
-  };
-
   return (
     <Grid
       className={"auth-title"}
@@ -37,14 +23,7 @@ const AuthTitle = (props: AuthTitleProps) => {
         </Typography>
       </Grid>
       <Grid item>
-        <Grid container direction={"row"} spacing={1} alignItems={"center"}>
-          <Grid item>
-            <Typography variant="caption" display={"block"}>
-              {props.description}
-            </Typography>
-          </Grid>
-          {_renderLink()}
-        </Grid>
+        <CreateAccountLink description={props.description} link={props.link} />
       </Grid>
     </Grid>
   );
